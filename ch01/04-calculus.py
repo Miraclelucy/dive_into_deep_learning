@@ -20,3 +20,7 @@ for i in range(5):
 x = np.arange(0, 3, 0.1)
 d2l.plot(x, [f(x), 2 * x - 3], 'x', 'f(x)', legend=['f(x)', 'Tangent line (x=1)'])
 d2l.plt.show();
+
+x = np.arange(0.5, 3, 0.2)
+d2l.plot(x, [x ** 3 - 1 / x, 4 * x - 4], 'x', 'f(x)', legend=['f(x)', 'Tangent line (x=1)'])
+d2l.plt.show();
