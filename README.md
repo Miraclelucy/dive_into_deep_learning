@@ -8,7 +8,7 @@
 2. 课程的课件地址：https://zh-v2.d2l.ai/
 3. 另一个可参考的笔记：https://tangshusen.me/Dive-into-DL-PyTorch
 
-### 课程目录
+### 本笔记的目录
 1. 预备知识  
 1.1. 数据操作  
 1.2. 数据预处理  
