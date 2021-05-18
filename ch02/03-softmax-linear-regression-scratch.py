@@ -1,5 +1,5 @@
 import sys
-
+import os
 import matplotlib.pyplot as plt
 import torch
 from d2l import torch as d2l
@@ -7,23 +7,21 @@ from d2l import torch as d2l
 sys.path.append('D:\\pythonspace\\d2l\\d2lutil')  # 加入路径，添加目录
 import common
 
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
+
 ## 读取小批量数据
 batch_size = 256
 train_iter, test_iter = common.load_fashion_mnist(batch_size)
 print(len(train_iter))  # train_iter的长度是235；说明数据被分成了234组大小为256的数据加上最后一组大小不足256的数据
 print('11111111')
-for X, y in train_iter:
-    print(X, y)
-    break; # 尝试打印第一组X, y的形状：torch.Size([256, 1, 28, 28])  torch.Size([256])
 
 
 ## 展示部分数据
-def get_fashion_mnist_labels(label):  # @save
+def get_fashion_mnist_labels(labels):  # @save
     """返回Fashion-MNIST数据集的文本标签。"""
-    text_labels = [
-        't-shirt', 'trouser', 'pullover', 'dress', 'coat', 'sandal', 'shirt',
-        'sneaker', 'bag', 'ankle boot']
-    return text_labels[label]
+    text_labels = ['t-shirt', 'trouser', 'pullover', 'dress', 'coat',
+                   'sandal', 'shirt', 'sneaker', 'bag', 'ankle boot']
+    return [text_labels[int(i)] for i in labels]
 
 
 def show_fashion_mnist(images, labels):
@@ -32,13 +30,14 @@ def show_fashion_mnist(images, labels):
     _, figs = plt.subplots(1, len(images), figsize=(12, 12))
     for f, img, lbl in zip(figs, images, labels):
         f.imshow(img.view((28, 28)).numpy())
-        f.set_title(get_fashion_mnist_labels(lbl))
+        f.set_title(lbl)
         f.axes.get_xaxis().set_visible(False)
         f.axes.get_yaxis().set_visible(False)
     plt.show()
 
-
-#show_fashion_mnist(train_data[0:10], train_targets[0:10])
+#展示部分训练数据
+train_data, train_targets = iter(train_iter).next()
+show_fashion_mnist(train_data[0:10], train_targets[0:10])
 
 # 初始化模型参数
 num_inputs = 784
@@ -115,4 +114,12 @@ def train_ch3(net, train_iter, test_iter, loss, num_epochs, batch_size,
               % (epoch + 1, train_l_sum / n, train_acc_sum / n, test_acc))
 
 
+# 训练模型
 train_ch3(net, train_iter, test_iter, cross_entropy, num_epochs, batch_size, [W, b], lr)
+
+# 预测模型
+X, y = iter(test_iter).next()
+true_labels = get_fashion_mnist_labels(y.numpy())
+pred_labels = get_fashion_mnist_labels(net(X).argmax(dim=1).numpy())
+titles = [true + '\n' + pred for true, pred in zip(true_labels, pred_labels)]
+show_fashion_mnist(X[0:9], titles[0:9])
