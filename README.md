@@ -10,21 +10,20 @@
 
 ### 本笔记的目录
 ##### ch01. 预备知识  
-1.1.<a href="https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch01/01-ndarray.py" target="_blank">数据操作</a> 
-[数据操作](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch01/01-ndarray.py)  
-1.2. 数据预处理  
-1.3. 线性代数  
-1.4. 微分  
-1.5. 自动求导  
-1.6. 概率  
+1.1. [数据操作](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch01/01-ndarray.py)  
+1.2. [数据预处理](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch01/02-pandas.py)  
+1.3. [线性代数](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch01/03-linear-algebra.py)  
+1.4. [微分](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch01/04-calculus.py)  
+1.5. [自动求导](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch01/05-autograd.py)  
+1.6. 概率 
 ##### ch02. 线性神经网络  
-2.1. 线性回归  
-2.2. 线性回归的从零开始实现  
+2.1. [线性回归](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch02/01-linear-regression.py)  
+2.2. [线性回归的从零开始实现](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch02/02-linear-regression-scratch.py)  
 2.3. 线性回归的简洁实现  
 2.4. softmax回归  
-2.5. 图像分类数据集  
-2.6. softmax回归的从零开始实现  
-2.7. softmax回归的简洁实现  
+2.5. [图像分类数据集](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/d2lutil/common.py)  
+2.6. [softmax回归的从零开始实现](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch02/03-softmax-linear-regression-scratch.py)  
+2.7. [softmax回归的简洁实现](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch02/04-softmax-linear-regression-concise.py)  
 ##### ch03. 多层感知机  
 3.1. 多层感知机  
 3.2. 多层感知机的从零开始实现  
