@@ -25,26 +25,26 @@
 2.6. [softmax回归的从零开始实现](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch02/03-softmax-linear-regression-scratch.py)  
 2.7. [softmax回归的简洁实现](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch02/04-softmax-linear-regression-concise.py)  
 ##### ch03. 多层感知机  
-3.1. 多层感知机  
-3.2. 多层感知机的从零开始实现  
-3.3. 多层感知机的简洁实现  
-3.4. 模型选择、欠拟合和过拟合  
-3.5. 权重衰减  
-3.6. Dropout  
+3.1. [多层感知机](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch03/01-mlp.py)  
+3.2. [多层感知机的从零开始实现](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch03/02-mlp-from-zero.py)  
+3.3. [多层感知机的简洁实现](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch03/03-mlp-simple.py)  
+3.4. [模型选择、欠拟合和过拟合](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch03/04-underfit-overfit.py)  
+3.5. [权重衰减](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch03/05-weight-decay-simple.py)  
+3.6. [Dropout](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch03/06-dropout-simple.py)  
 3.7. 正向传播、反向传播和计算图  
 3.8. 数值稳定性和模型初始化  
 3.9. 环境和分布偏移  
 3.10. 实战 Kaggle 比赛：预测房价  
 ##### ch04. 深度学习计算  
-4.1. 层和块  
-4.2. 参数管理  
+4.1. [层和块](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch04/01-model-construction.py)  
+4.2. [参数管理](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch04/02-parameters.py)  
 4.3. 延后初始化  
-4.4. 自定义层  
-4.5. 读写文件  
+4.4. [自定义层](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch04/03-custom-layer.py)  
+4.5. [读写文件](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch04/04-read-write.py)  
 4.6. GPU  
 ##### ch05. 卷积神经网络  
 5.1. 二维卷积层  
 5.2. 填充和步幅  
-5.3. 多输入多输出通道  
-5.4. 池化层  
+5.3. [多输入多输出通道](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch05/03-channels.py)  
+5.4. [池化层](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch05/04-pooling.py)  
 5.5. 卷积神经网络（LeNet）  
