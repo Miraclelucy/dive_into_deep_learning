@@ -10,7 +10,7 @@
 
 ### 本笔记的目录
 ##### ch01. 预备知识  
-1.1. [数据操作](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch01/01-ndarray.py?_blank) 
+1.1. [数据操作](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch01/01-ndarray.py) {:target="_blank"}  
 1.2. 数据预处理  
 1.3. 线性代数  
 1.4. 微分  
