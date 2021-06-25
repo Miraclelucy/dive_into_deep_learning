@@ -48,6 +48,6 @@
 5.3. [多输入多输出通道](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch05/03-channels.py)  
 5.4. [池化层](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch05/04-pooling.py)  
 5.5. 卷积神经网络（LeNet）  
-5.6. 深度卷积神经网络（AlexNet）
-5.7. 使用重复元素的网络（VGG）
-5.8. 网络中的网络（NiN）
+5.6. 深度卷积神经网络（AlexNet）  
+5.7. 使用重复元素的网络（VGG）  
+5.8. 网络中的网络（NiN）  
