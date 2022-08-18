@@ -15,7 +15,6 @@
 1.3. [线性代数](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch01/03-linear-algebra.py)  
 1.4. [微分](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch01/04-calculus.py)  
 1.5. [自动求导](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch01/05-autograd.py)  
-
 ##### ch02. 线性神经网络  
 2.1. [线性回归](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch02/01-linear-regression.py)  
 2.2. [线性回归的从零开始实现](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch02/02-linear-regression-scratch.py)  
@@ -43,32 +42,36 @@
 4.5. [读写文件](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch04/04-read-write.py)  
 4.6. GPU  
 ##### ch05. 卷积神经网络   
-5.2. 填充和步幅  
-5.3. [多输入多输出通道](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch05/03-channels.py)  
-5.4. [池化层](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch05/04-pooling.py)  
-5.5. 卷积神经网络（LeNet） 
+5.2. 图像卷积    
+5.3. 填充和步幅  
+5.4. [多输入多输出通道](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch05/03-channels.py)  
+5.5. [汇聚层](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch05/04-pooling.py)  
+5.6. 卷积神经网络（LeNet） 
 ##### ch06. 现代卷积神经网络  
-6.6. 深度卷积神经网络（AlexNet）  
-6.7. 使用重复元素的网络（VGG）  
-6.8. 网络中的网络（NiN）  
-6.9. 含并行连结的网络（GoogLeNet）  
-6.10. 批量归一化  
-6.11. 残差网络（ResNet）  
-6.12. 稠密连接网络（DenseNet） 
+6.1. 深度卷积神经网络（AlexNet）  
+6.2. 使用重复元素的网络（VGG）  
+6.3. 网络中的网络（NiN）  
+6.4. 含并行连结的网络（GoogLeNet）  
+6.5. 批量归一化  
+6.6. 残差网络（ResNet）  
+6.7. 稠密连接网络（DenseNet） 
 ##### ch07.  循环神经网络
-7.1. 语言模型  
-7.2. 循环神经网络  
-7.3. 语言模型数据集（周杰伦专辑歌词）  
-7.4. 循环神经网络的从零开始实现  
-7.5. 循环神经网络的简洁实现  
-7.6. 通过时间反向传播  
+7.1. 序列模型  
+7.2. 文本预处理 
+7.3. 语言模型和数据集（周杰伦专辑歌词）  
+7.4. 循环神经网络  
+7.5. 循环神经网络的从零开始实现  
+7.6. 循环神经网络的简洁实现  
+7.7. 通过时间反向传播  
 ##### ch08.  现代循环神经网络  
-8.7. 门控循环单元（GRU）  
-8.8. 长短期记忆（LSTM）  
-8.9. 深度循环神经网络  
-8.10. 双向循环神经网络  
-8.11. 机器翻译与数据集  
-8.12. 编码器-解码器结构
+8.1. 门控循环单元（GRU）    
+8.2. 长短期记忆（LSTM）    
+8.3. 深度循环神经网络    
+8.4. 双向循环神经网络    
+8.5. 机器翻译与数据集    
+8.6. 编码器-解码器结构  
+8.7. 序列到序列学习  
+8.8. 束搜索  
 ##### ch09.  注意力机制  
 9.1. 注意力机制    
 9.2. 注意力汇聚    
