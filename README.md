@@ -33,7 +33,7 @@
 3.7. 正向传播、反向传播和计算图  
 3.8. 数值稳定性和模型初始化  
 3.9. 环境和分布偏移  
-3.10. 实战 Kaggle 比赛：预测房价   
+3.10. [实战 Kaggle 比赛：预测房价](https://github.com/Miraclelucy/dive_into_deep_learning/blob/main/ch03/10-kaggle-house-price.py)   
 ##### ch04. 深度学习计算  
 4.1. [层和块](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch04/01-model-construction.py)  
 4.2. [参数管理](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch04/02-parameters.py)  
