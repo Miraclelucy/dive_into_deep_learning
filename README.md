@@ -42,7 +42,7 @@
 4.5. [读写文件](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch04/04-read-write.py)  
 4.6. GPU  
 ##### ch05. 卷积神经网络   
-5.2. 图像卷积    
+5.2. [图像卷积](https://github.com/Miraclelucy/dive_into_deep_learning/blob/main/ch05/02-conv-layer.py)      
 5.3. 填充和步幅  
 5.4. [多输入多输出通道](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch05/03-channels.py)  
 5.5. [汇聚层](https://github.com/Miraclelucy/dive-into-deep-learning/blob/main/ch05/04-pooling.py)  
