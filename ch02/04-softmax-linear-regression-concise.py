@@ -4,17 +4,14 @@ import torch
 from d2l import torch as d2l
 from torch import nn
 
-sys.path.append('D:\\pythonspace\\d2l\\d2lutil')  # 加入路径，添加目录
-import common
-
 ## 读取小批量数据
 batch_size = 256
-train_iter, test_iter = common.load_fashion_mnist(batch_size)
+train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size)
 print(len(train_iter))  # train_iter的长度是235；说明数据被分成了234组大小为256的数据加上最后一组大小不足256的数据
 print('11111111')
 for X, y in train_iter:
     print(X, y)
-    break;  # 尝试打印第一组X, y的形状：torch.Size([256, 1, 28, 28])  torch.Size([256])
+    break  # 尝试打印第一组X, y的形状：torch.Size([256, 1, 28, 28])  torch.Size([256])
 
 # 定义模型
 net = nn.Sequential(nn.Flatten(), nn.Linear(784, 10))

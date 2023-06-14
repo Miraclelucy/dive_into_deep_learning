@@ -1,0 +1,6 @@
+d2l==0.17.6
+matplotlib==3.5.1
+numpy==1.21.5
+torch==2.0.1
+torchvision==0.15.2
+

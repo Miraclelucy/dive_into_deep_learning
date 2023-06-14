@@ -2,17 +2,23 @@ import sys
 import os
 import matplotlib.pyplot as plt
 import torch
+import torchvision
+from torchvision import transforms
+from torch.utils import data
 from d2l import torch as d2l
-
-sys.path.append('D:\\pythonspace\\d2l\\d2lutil')  # 加入路径，添加目录
-import common
+import d2lutil.common as common
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 ## 读取小批量数据
 batch_size = 256
-train_iter, test_iter = common.load_fashion_mnist(batch_size)
-print(len(train_iter))  # train_iter的长度是235；说明数据被分成了234组大小为256的数据加上最后一组大小不足256的数据
+trans = transforms.ToTensor()
+#train_iter, test_iter = common.load_fashion_mnist(batch_size) #无法翻墙的，可以参考这种方法取下载数据集
+mnist_train  = torchvision.datasets.FashionMNIST(
+    root="../data", train=True, transform=trans, download=True) # 需要网络翻墙，这里数据集会自动下载到项目跟目录的/data目录下
+mnist_test  = torchvision.datasets.FashionMNIST(
+    root="../data", train=False, transform=trans, download=True) # 需要网络翻墙，这里数据集会自动下载到项目跟目录的/data目录下
+print(len(mnist_train))  # train_iter的长度是235；说明数据被分成了234组大小为256的数据加上最后一组大小不足256的数据
 print('11111111')
 
 
@@ -35,8 +41,9 @@ def show_fashion_mnist(images, labels):
         f.axes.get_yaxis().set_visible(False)
     plt.show()
 
+
+train_data, train_targets = next(iter(data.DataLoader(mnist_train, batch_size=18)))
 #展示部分训练数据
-train_data, train_targets = iter(train_iter).next()
 show_fashion_mnist(train_data[0:10], train_targets[0:10])
 
 # 初始化模型参数
@@ -115,10 +122,12 @@ def train_ch3(net, train_iter, test_iter, loss, num_epochs, batch_size,
 
 
 # 训练模型
+train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size)
 train_ch3(net, train_iter, test_iter, cross_entropy, num_epochs, batch_size, [W, b], lr)
 
 # 预测模型
-X, y = iter(test_iter).next()
+for X, y in test_iter:
+    break
 true_labels = get_fashion_mnist_labels(y.numpy())
 pred_labels = get_fashion_mnist_labels(net(X).argmax(dim=1).numpy())
 titles = [true + '\n' + pred for true, pred in zip(true_labels, pred_labels)]

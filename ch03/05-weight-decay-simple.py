@@ -5,8 +5,7 @@ import numpy as np
 import torch
 from d2l import torch as d2l
 
-sys.path.append('D:\\pythonspace\\d2l\\d2lutil')  # 加入路径，添加目录
-import common
+import d2lutil.common as common
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
@@ -25,10 +24,20 @@ batch_size, num_epochs, lr = 1, 100, 0.003
 dataset = torch.utils.data.TensorDataset(train_features, train_labels)
 train_iter = torch.utils.data.DataLoader(dataset, batch_size, shuffle=True)
 
+def init_params():
+    w = torch.normal(0, 1, size=(num_inputs, 1), requires_grad=True)
+    b = torch.zeros(1, requires_grad=True)
+    return [w, b]
+
+def l2_penalty(w):
+    return torch.sum(w.pow(2)) / 2
+
+net, loss = d2l.linreg, d2l.squared_loss
 
 def fit_and_plot(lambd):
     w, b = init_params()
     train_ls, test_ls = [], []
+
     for _ in range(num_epochs):
         for X, y in train_iter:
             # 添加了L2范数惩罚项

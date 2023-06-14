@@ -4,8 +4,7 @@ import sys
 import torch
 from torch import nn
 
-sys.path.append('D:\\pythonspace\\d2l\\d2lutil')  # 加入路径，添加目录
-import common
+import d2lutil.common as common
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 

@@ -5,8 +5,7 @@ import torch
 from d2l import torch as d2l
 from torch import nn
 
-sys.path.append('D:\\pythonspace\\d2l\\d2lutil')  # 加入路径，添加目录
-import common
+import d2lutil.common as common
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
@@ -54,7 +53,7 @@ class Net(nn.Module):
 net = Net(num_inputs, num_outputs, num_hidden1, num_hidden2)
 num_epochs, lr, batch_size = 10, 0.5, 256
 loss = nn.CrossEntropyLoss()
-train_iter, test_iter = common.load_fashion_mnist(batch_size)
+train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size)
 print(len(train_iter))
 trainer = torch.optim.SGD(net.parameters(), lr=lr)
 
